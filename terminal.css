@@ -1,0 +1,201 @@
+body {
+  margin: 0;
+  background-color: #1e1e1e;
+  font-family: 'Consolas', 'Courier New', monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.window {
+  width: 90%;
+  height: calc(100vh - 40px);
+  border: 2px solid #3c3c3c;
+  box-shadow: 0 0 20px #000;
+  background-color: #252526;
+  display: flex;
+  flex-direction: column;
+}
+
+.window-header {
+  background-color: #2d2d30;
+  color: #cccccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  border-bottom: 1px solid #3c3c3c;
+}
+
+.window-title {
+  font-weight: bold;
+}
+
+.window-controls button {
+  background: none;
+  border: none;
+  color: #cccccc;
+  font-size: 16px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.window-controls button:hover {
+  color: #ff5c5c;
+}
+
+.window-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.terminal-container {
+  display: flex;
+  height: 100%;
+}
+
+.menu {
+  width: 200px;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-right: 1px solid #3c3c3c;
+}
+
+.menu h2 {
+  margin-bottom: 20px;
+  color: #cccccc;
+}
+
+.menu button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  background: none;
+  border: 1px solid #8a8a8a;
+  color: #8a8a8a;
+  padding: 10px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.menu button:hover {
+  background-color: #333;
+}
+
+.chat-area {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  color: #cfcfcf;
+}
+
+#chatOutput {
+  white-space: pre-wrap;
+  margin-bottom: 20px;
+}
+
+#chatForm {
+  display: flex;
+  align-items: center;
+}
+
+#chatForm span {
+  margin-right: 10px;
+}
+
+#chatInput {
+  background: none;
+  border: none;
+  color: #cfcfcf;
+  font-family: inherit;
+  font-size: 1em;
+  width: 100%;
+  outline: none;
+}
+
+.desktop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* permite que janelas flutuem sem bloquear clique */
+  z-index: 100;
+}
+
+.chat-window {
+  pointer-events: auto; /* permite interação com a janela */
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: 80%;
+  max-width: 900px;
+  background-color: #252526;
+  border: 2px solid #3c3c3c;
+  box-shadow: 0 0 20px #000;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.chat-window-header {
+  background-color: #2d2d30;
+  color: #cccccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  border-bottom: 1px solid #3c3c3c;
+  cursor: move;
+}
+
+.chat-window-title {
+  font-weight: bold;
+}
+
+.chat-window-controls button {
+  background: none;
+  border: none;
+  color: #cccccc;
+  font-size: 16px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.chat-window-controls button:hover {
+  color: #ff5c5c;
+}
+
+.chat-window-body {
+  padding: 20px;
+  color: #cfcfcf;
+  flex: 1;
+  overflow-y: auto;
+  white-space: pre-wrap;       /* ← quebra de linha automática */
+  line-height: 1.6;            /* ← espaçamento entre linhas */
+  font-size: 14px;
+}
+
+.chat-window-form {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #3c3c3c;
+}
+
+.chat-window-form span {
+  margin-right: 10px;
+}
+
+.chat-window-form input {
+  background: none;
+  border: none;
+  color: #cfcfcf;
+  font-family: inherit;
+  font-size: 1em;
+  width: 100%;
+  outline: none;
+}
+

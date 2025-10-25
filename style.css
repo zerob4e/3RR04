@@ -1,0 +1,76 @@
+body {
+  background-color: #1e1e1e;
+  font-family: 'Consolas', 'Courier New', monospace;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.window {
+  width: 700px;
+  border: 2px solid #3c3c3c;
+  box-shadow: 0 0 20px #000;
+  background-color: #252526;
+  display: flex;
+  flex-direction: column;
+}
+
+.window-header {
+  background-color: #2d2d30;
+  color: #cccccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  border-bottom: 1px solid #3c3c3c;
+}
+
+.window-title {
+  font-weight: bold;
+}
+
+.window-controls button {
+  background: none;
+  border: none;
+  color: #cccccc;
+  font-size: 16px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.window-controls button:hover {
+  color: #ff5c5c;
+}
+
+.window-body {
+  padding: 20px;
+}
+
+.terminal {
+  color: #00ff99;
+}
+
+#output {
+  margin-bottom: 20px;
+}
+
+#loginForm {
+  display: flex;
+  align-items: center;
+}
+
+#loginForm span {
+  margin-right: 10px;
+}
+
+#terminalInput {
+  background: none;
+  border: none;
+  color: #00ff99;
+  font-family: inherit;
+  font-size: 1em;
+  width: 100%;
+  outline: none;
+}

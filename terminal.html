@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terminal</title>
+  <link rel="stylesheet" href="terminal.css" />
+</head>
+<body>
+  <div class="window">
+    <div class="window-header">
+      <div class="window-title">Terminal</div>
+      <div class="window-controls">
+        <button class="minimize">–</button>
+        <button class="close">×</button>
+      </div>
+    </div>
+    <div class="window-body">
+      <div class="chat-area">
+        <pre id="chatOutput"></pre>
+        <form id="chatForm">
+          <span>&gt;</span>
+          <input type="text" id="chatInput" autocomplete="off" />
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="terminal.js"></script>
+</body>
+</html>
