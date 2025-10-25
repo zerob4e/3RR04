@@ -5,6 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>E16RROR9 - Terminal Login</title>
   <link rel="stylesheet" href="style.css" />
+  <script>
+    // Verificação de consentimento — se o visitante NÃO deu permissão, redireciona para prelogin.html.
+    (function() {
+      try {
+        const access = localStorage.getItem('terminalAccess');
+        // Se não existir consentimento explícito 'granted', forçar a prelogin
+        if (access !== 'granted') {
+          // Evita loop se já estivermos na prelogin
+          if (!location.pathname.endsWith('prelogin.html')) {
+            location.replace('prelogin.html');
+          }
+        }
+      } catch (e) {
+        // se localStorage inacessível, não bloquear — você pode optar por forçar redirecionamento mesmo assim
+        console.warn('Erro ao acessar localStorage:', e);
+      }
+    })();
+  </script>
 </head>
 <body>
   <div class="window">
