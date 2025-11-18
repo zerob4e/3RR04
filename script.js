@@ -5,9 +5,9 @@ let stage = "user"; // user or password
 let selectedUser = null;
 
 const validUsers = {
-  ghost: "MOONG162N",
-  bear: "D9009ER",
-  fox: "S4N95OP"
+  haon: "MOON",
+  be4: "PRAGA",
+  hinata: "FAMILIA"
 };
 
 document.getElementById("loginForm").addEventListener("submit", function (e) {
