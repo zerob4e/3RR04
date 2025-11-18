@@ -5,7 +5,7 @@ let stage = "user"; // user or password
 let selectedUser = null;
 
 const validUsers = {
-  ghost: "PRAGA",
+  ghost: "MOONG162N",
   bear: "D9009ER",
   fox: "S4N95OP"
 };
